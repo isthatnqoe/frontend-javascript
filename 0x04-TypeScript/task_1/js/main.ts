@@ -8,13 +8,20 @@ interface Teacher {
   [key: string]: any;
 }
 
-// Test object (optional, useful for testing or execution)
-const teacher: Teacher = {
-  firstName: "John",
-  lastName: "Smith",
-  fullTimeEmployee: false,
-  location: "London",
-  contract: false
-};
+interface Director{
+    readonly firstName: string;
+    readonly lastName: string;
+    fullTimeEmployee: boolean;
+    yearsOfExperience?: number;
+    location: string;
+    [key:string]:any;
+    numberOfReports:number;
+}
 
-console.log(teacher);
+function printTeacher(firstName:string,lastName:string):string{
+    return `${firstName.charAt(0)}. ${lastName}`;
+}
+
+interface printTeacherFunction{
+    (firstName:string,lastName:string):string;
+}

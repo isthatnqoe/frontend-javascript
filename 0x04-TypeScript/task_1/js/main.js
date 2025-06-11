@@ -1,9 +1,4 @@
-// Test object (optional, useful for testing or execution)
-var teacher = {
-    firstName: "John",
-    lastName: "Smith",
-    fullTimeEmployee: true,
-    location: "London",
-    contract: false
-};
-console.log(teacher);
+function printTeacher(firstName, lastName) {
+    return "".concat(firstName.charAt(0), ". ").concat(lastName);
+}
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
